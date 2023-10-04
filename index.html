@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria CSS rotativa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="box">
+        <span style="--i:1;"><img src="im01.jpg" alt="img1"></span>
+        <span style="--i:2;"><img src="im02.jpg" alt="img2"></span>
+        <span style="--i:3;"><img src="im03.jpg" alt="img3"></span>
+        <span style="--i:4;"><img src="im04.jpg" alt="img4"></span>
+        <span style="--i:5;"><img src="im05.jpg" alt="img5"></span>
+        <span style="--i:6;"><img src="im06.jpg" alt="img6"></span>
+        <span style="--i:7;"><img src="im07.jpg" alt="img7"></span>
+        <span style="--i:8;"><img src="im08.jpg" alt="img8"></span>
+    </div>
+
+    <script>
+        let box = document.querySelector('.box');
+window.onmousemove = function(e){
+    let x = e.clientX/3;
+    box.style.transform = "perspective(1000px) rotateY(" + x + "deg)";
+}
+
+    </script>
+</body>
+</html>
